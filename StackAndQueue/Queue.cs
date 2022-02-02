@@ -16,7 +16,7 @@ namespace StackAndQueue
             this.head = null;
         }
 
-        //Method to insert the node into Queue(UC3)
+        //Method to insert the value into Queue(UC3)
         public void Enqueue(int data)
         {
             Node newNode = new Node(data);
@@ -34,6 +34,19 @@ namespace StackAndQueue
             Console.WriteLine("{0} is inserted into queue ", newNode.data);
         }
 
+        //Method to delete the value from begining in queue(UC4)
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
+
         //Method to display the value in Queue(UC3)
         public void Display()
         {
@@ -43,6 +56,7 @@ namespace StackAndQueue
                 Console.WriteLine("Queue is empty");
                 return;
             }
+            Console.Write("The elements in queue are : ");
             while (temp != null)
             {
                 Console.Write(temp.data+" ");

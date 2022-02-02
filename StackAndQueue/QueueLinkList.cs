@@ -24,5 +24,11 @@ namespace StackAndQueue
         {
             list.Display();
         }
+
+        //Method to delete the value from begining in queue using linklist(UC4)
+        public void Dequeue()
+        {
+            list.DeleteFirst();
+        }
     }
 }

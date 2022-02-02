@@ -16,13 +16,13 @@ namespace StackAndQueue
 
             while (true)
             {
-                Console.WriteLine("1: Add Values In Queue \n2: Display Queue Values \n3: Exit");
+                Console.WriteLine("1: Add Values In Queue \n2: Display Queue Values \n3: Delete Value From Queue \n4: Exit");
                 Console.Write("Enter A Choice From Above : ");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        //Adding the value in stack(UC1)
+                        //Adding the value in queue(UC3)
                         Console.Write("Enter A Value To Add In Queue : ");
                         int numQueue = int.Parse(Console.ReadLine());
                         queue.Enqueue(numQueue);
@@ -32,6 +32,10 @@ namespace StackAndQueue
                         queue.Display();
                         break;
                     case 3:
+                        //Deleting the value from begining in queue(UC4)
+                        queue.Dequeue();
+                        break;
+                    case 4:
                         Environment.Exit(0);
                         break;
                     default:
