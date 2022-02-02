@@ -18,7 +18,7 @@ namespace StackAndQueue
 
             while (true)
             {
-                Console.WriteLine("1: Perform Stack Operation \n2: Perform Stack Operation Using LinkList \n3: Exit");
+                Console.WriteLine("1: Perform Stack Operation \n2: Perform Stack Operation Using LinkList \n3: Perform Queue Operation \n4: Perform Queue Using LinkList \n5: Exit");
                 Console.WriteLine("Enter The Choice From The Above");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -32,6 +32,14 @@ namespace StackAndQueue
                         StackLinkListOperation.Perform();
                         break;
                     case 3:
+                        //Performing the stack operation(UC2)
+                        QueueOperations.Perform();
+                        break;
+                    case 4:
+                        //Performing the stack Operation using linklist(UC2)
+                        QueueLinkListOperations.Perform();
+                        break;
+                    case 5:
                         Environment.Exit(0);
                         break;
                     default:

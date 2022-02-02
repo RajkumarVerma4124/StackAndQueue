@@ -25,7 +25,7 @@ namespace StackAndQueue
                 top = newNode;
             }
             this.top = newNode;
-            Console.WriteLine("{0} New node is added to the top", newNode.data);
+            Console.WriteLine("{0} is added to the top in stack", newNode.data);
         }
 
         //Creating a display method in stack to view values(UC1)
