@@ -48,6 +48,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stack.cs" />
+    <Compile Include="StackLinkList.cs" />
+    <Compile Include="StackLinkListOperation.cs" />
+    <Compile Include="StackOperation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

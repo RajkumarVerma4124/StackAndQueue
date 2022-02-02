@@ -97,6 +97,17 @@ namespace StackAndQueue.LinkListProgram
             return deletedNode;
         }
 
+        //Displaying the first element(UC10)
+        public void Peek()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is top value", this.head.data);
+        }
+
         //Deleting the last element(UC6)
         public int DeleteLast()
         {

@@ -15,9 +15,6 @@ namespace StackAndQueue
             this.top = null;
         }
 
-        //Creating a single linklist(UC1)
-        LinkedList list = new LinkedList();
-
         //Creating a push method in stack to add values at top(UC1)
         public void Push(int data)
         {
@@ -29,18 +26,6 @@ namespace StackAndQueue
             }
             this.top = newNode;
             Console.WriteLine("{0} New node is added to the top", newNode.data);
-        }
-
-        //Creating a push method using linklist to add values(UC1)
-        public void PushStack(int data)
-        {
-            list.AddFirst(data);
-        }
-
-        //Creating a display method using linklist to show values(UC1)
-        public void DisplayStack()
-        {
-            list.Display();
         }
 
         //Creating a display method in stack to view values(UC1)
@@ -59,6 +44,40 @@ namespace StackAndQueue
                     temp = temp.next;
                 }
             }
+        }
+
+        //Method to show the top value in stack(UC2)
+        public void Peek()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is top value in stack", this.top.data);
+        }
+
+        //Method to delete the top element from the stack(UC2)
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Top value {0} is deleted", this.top.data);
+            this.top = this.top.next;
+        }
+
+        //Method to find and delete the top value until stack is empty(UC2)
+        public bool IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+            return true;
         }
     }
 }
